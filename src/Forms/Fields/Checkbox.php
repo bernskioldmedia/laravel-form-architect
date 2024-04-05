@@ -3,7 +3,7 @@
 class Checkbox extends HtmlFormField
 {
 
-    protected function getViewComponent(): string
+    public function viewComponent(): string
     {
         return config('form-architect.components.checkbox', 'form.checkbox');
     }

@@ -43,7 +43,7 @@ class Fieldset implements Arrayable, ViewComponentable, JsonSerializable
     {
     }
 
-    protected function getViewComponent(): string
+    public function viewComponent(): string
     {
         return config('form-architect.components.fieldset', 'form.fieldset');
     }

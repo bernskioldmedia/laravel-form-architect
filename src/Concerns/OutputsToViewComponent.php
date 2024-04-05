@@ -7,7 +7,7 @@ use Illuminate\View\ComponentAttributeBag;
 trait OutputsToViewComponent
 {
 
-    abstract protected function getViewComponent(): string;
+    abstract public function viewComponent(): string;
 
     public function toViewComponentAttributes(): ComponentAttributeBag
     {

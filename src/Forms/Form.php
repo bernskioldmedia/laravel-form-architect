@@ -17,6 +17,9 @@ use JsonSerializable;
 use function array_merge;
 use function config;
 
+/**
+ * @method static Form make(array $fields = [])
+ */
 class Form implements Arrayable, ViewComponentable, JsonSerializable
 {
     use Makeable,
@@ -33,7 +36,7 @@ class Form implements Arrayable, ViewComponentable, JsonSerializable
     {
     }
 
-    protected function getViewComponent(): string
+    public function viewComponent(): string
     {
         return config('form-architect.components.form', 'form.index');
     }

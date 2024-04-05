@@ -16,7 +16,7 @@ class Select extends HtmlFormField
         ]);
     }
 
-    protected function getViewComponent(): string
+    public function viewComponent(): string
     {
         if ($this->multiple) {
             return config('form-architect.components.multiselect', 'form.multiselect');

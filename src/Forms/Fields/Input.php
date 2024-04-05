@@ -38,7 +38,7 @@ class Input extends HtmlFormField
         return array_merge(parent::fieldData(), $data);
     }
 
-    protected function getViewComponent(): string
+    public function viewComponent(): string
     {
         return config('form-architect.components.input', 'form.input');
     }

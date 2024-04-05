@@ -2,7 +2,9 @@
 
 namespace BernskioldMedia\LaravelFormArchitect;
 
+use BernskioldMedia\LaravelFormArchitect\Forms\Form;
 use Illuminate\Foundation\Console\AboutCommand;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use function config_path;
 
@@ -18,6 +20,8 @@ class LaravelFormArchitectServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/.../config/form-architect.php' => config_path('form-architect.php'),
         ], 'laravel-form-architect-config');
+
+        Blade::anonymousComponentPath(__DIR__ . '/../resources/views/components', 'form-architect');
     }
 
     public function register(): void
