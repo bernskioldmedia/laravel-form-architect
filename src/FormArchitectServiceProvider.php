@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use function config_path;
 
-class LaravelFormArchitectServiceProvider extends ServiceProvider
+class FormArchitectServiceProvider extends ServiceProvider
 {
 
     public function boot(): void

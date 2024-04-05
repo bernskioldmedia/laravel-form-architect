@@ -2,7 +2,7 @@
 
 namespace BernskioldMedia\LaravelFormArchitect\Tests;
 
-use BernskioldMedia\LaravelFormArchitect\LaravelFormArchitectServiceProvider;
+use BernskioldMedia\LaravelFormArchitect\FormArchitectServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            LaravelFormArchitectServiceProvider::class,
+            FormArchitectServiceProvider::class,
         ];
     }
 
