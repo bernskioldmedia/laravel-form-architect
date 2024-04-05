@@ -28,7 +28,7 @@ class Input extends HtmlFormField
     protected function fieldData(): array
     {
         $data = [
-            'type' => $this->type,
+            'type' => $this->type->value,
             'prefix' => $this->prefix,
             'suffix' => $this->suffix,
             'placeholder' => $this->placeholder,
