@@ -2,7 +2,6 @@
 
 namespace BernskioldMedia\LaravelFormArchitect;
 
-use BernskioldMedia\LaravelFormArchitect\Forms\Form;
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
