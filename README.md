@@ -30,7 +30,19 @@ This is the contents of the published config file:
 ```php
 <?php
 
-return [];
+return [
+    'components' => [
+        'form' => 'form.index',
+        'fieldset' => 'form.fieldset',
+        'field' => 'form.field',
+        'input' => 'form.input',
+        'checkbox' => 'form.checkbox',
+        'radio' => 'form.radio',
+        'select' => 'form.select',
+        'textarea' => 'form.textarea',
+        'multiselect' => 'form.multiselect',
+    ],
+];
 ```
 
 Optionally, you can publish the views using
