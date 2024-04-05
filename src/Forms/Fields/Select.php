@@ -4,6 +4,9 @@ namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
 
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsOptions;
 
+/**
+ * @method static Select make(string $name, string $label = '')
+ */
 class Select extends HtmlFormField
 {
     use SupportsOptions;

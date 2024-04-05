@@ -20,7 +20,7 @@ use JsonSerializable;
 use function array_merge;
 
 /**
- * @method static Field make(string $name, string $label = '')
+ * @method static static make(string $name, string $label = '')
  */
 abstract class Field implements Arrayable, ViewComponentable, JsonSerializable
 {

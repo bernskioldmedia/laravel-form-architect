@@ -8,6 +8,9 @@ use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsSuffix;
 use BernskioldMedia\LaravelFormArchitect\Enums\InputType;
 use BernskioldMedia\LaravelFormArchitect\Exceptions\InvalidFormFieldConfigurationException;
 
+/**
+ * @method static Input make(string $name, string $label = '')
+ */
 class Input extends HtmlFormField
 {
     use SupportsSuffix,

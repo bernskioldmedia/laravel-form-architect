@@ -2,6 +2,11 @@
 
 namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
 
+use BernskioldMedia\LaravelFormArchitect\Forms\Field;
+
+/**
+ * @method static Checkbox make(string $name, string $label = '')
+ */
 class Checkbox extends HtmlFormField
 {
 
