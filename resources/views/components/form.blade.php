@@ -1,4 +1,3 @@
-@php use BernskioldMedia\LaravelFormArchitect\Forms\Fieldset; @endphp
 @props(['form'])
 <x-dynamic-component :component="config('form-architect.components.form')"
                      :attributes="$form->toViewComponentAttributes()">

@@ -1,6 +1,6 @@
 <?php
 
-namespace BernskioldMedia\LaravelFormArchitect;
+namespace BernskioldMedia\LaravelFormArchitect\Forms;
 
 use BernskioldMedia\LaravelFormArchitect\Concerns\Dumpable;
 use BernskioldMedia\LaravelFormArchitect\Concerns\HandlesValidation;

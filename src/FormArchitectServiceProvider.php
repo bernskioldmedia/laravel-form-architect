@@ -17,7 +17,7 @@ class FormArchitectServiceProvider extends ServiceProvider
         ]);
 
         $this->publishes([
-            __DIR__ . '/.../config/form-architect.php' => config_path('form-architect.php'),
+            __DIR__ . '/../config/form-architect.php' => config_path('form-architect.php'),
         ], 'laravel-form-architect-config');
 
         Blade::anonymousComponentPath(__DIR__ . '/../resources/views/components', 'form-architect');
@@ -26,7 +26,7 @@ class FormArchitectServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/.../config/form-architect.php', 'form-architect'
+            __DIR__ . '/../config/form-architect.php', 'form-architect'
         );
     }
 

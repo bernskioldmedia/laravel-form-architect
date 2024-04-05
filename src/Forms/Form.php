@@ -7,7 +7,6 @@ use BernskioldMedia\LaravelFormArchitect\Concerns\HasFields;
 use BernskioldMedia\LaravelFormArchitect\Concerns\Makeable;
 use BernskioldMedia\LaravelFormArchitect\Concerns\Metable;
 use BernskioldMedia\LaravelFormArchitect\Contracts\ViewComponentable;
-use BernskioldMedia\LaravelFormArchitect\Field;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;

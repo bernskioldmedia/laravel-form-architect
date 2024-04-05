@@ -1,3 +1,4 @@
+@php use BernskioldMedia\LaravelFormArchitect\Forms\Fieldset; @endphp
 @props(['field'])
 @if($field instanceof Fieldset)
     <x-dynamic-component :component="config('form-architect.components.fieldset')"

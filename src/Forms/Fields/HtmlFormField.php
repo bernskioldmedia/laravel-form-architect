@@ -4,7 +4,7 @@ use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsDisabled;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsHelpText;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPlaceholder;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsRequired;
-use BernskioldMedia\LaravelFormArchitect\Field;
+use BernskioldMedia\LaravelFormArchitect\Forms\Field;
 
 abstract class HtmlFormField extends Field
 {
