@@ -2,11 +2,14 @@
 
 return [
     'components' => [
-        'input' => 'forms.input',
-        'checkbox' => 'forms.checkbox',
-        'radio' => 'forms.radio',
-        'select' => 'forms.select',
-        'textarea' => 'forms.textarea',
-        'multiselect' => 'forms.multiselect',
+        'form' => 'form.index',
+        'fieldset' => 'form.fieldset',
+        'field' => 'form.field',
+        'input' => 'form.input',
+        'checkbox' => 'form.checkbox',
+        'radio' => 'form.radio',
+        'select' => 'form.select',
+        'textarea' => 'form.textarea',
+        'multiselect' => 'form.multiselect',
     ],
 ];

@@ -19,10 +19,10 @@ class Select extends HtmlFormField
     protected function getViewComponent(): string
     {
         if ($this->multiple) {
-            return config('form-architect.components.multiselect', 'forms.multiselect');
+            return config('form-architect.components.multiselect', 'form.multiselect');
         }
 
-        return config('form-architect.components.select', 'forms.select');
+        return config('form-architect.components.select', 'form.select');
     }
 
     public function multiple(bool $multiple = true): static

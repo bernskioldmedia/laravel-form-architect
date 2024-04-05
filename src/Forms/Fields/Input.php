@@ -40,7 +40,7 @@ class Input extends HtmlFormField
 
     protected function getViewComponent(): string
     {
-        return config('form-architect.components.input', 'forms.input');
+        return config('form-architect.components.input', 'form.input');
     }
 
     public function type(InputType $type): self
