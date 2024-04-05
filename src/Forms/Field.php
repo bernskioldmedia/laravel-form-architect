@@ -69,6 +69,8 @@ abstract class Field implements Arrayable, ViewComponentable, JsonSerializable
             'description' => $this->description,
             'fullwidth' => $this->fullwidth,
             'spanColumns' => $this->spanColumns,
+            'wireModel' => $this->wireModel,
+            'isWiredLive' => $this->isWiredLive,
         ];
     }
 
