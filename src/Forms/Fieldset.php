@@ -41,6 +41,8 @@ class Fieldset implements Arrayable, ViewComponentable, JsonSerializable
         array  $fields = [],
     )
     {
+        $this->label($label);
+        $this->fields($fields);
     }
 
     public function viewComponent(): string

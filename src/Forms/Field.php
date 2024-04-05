@@ -50,6 +50,7 @@ abstract class Field implements Arrayable, ViewComponentable, JsonSerializable
         string        $label = '',
     )
     {
+        $this->label($label);
     }
 
     public function id(): string

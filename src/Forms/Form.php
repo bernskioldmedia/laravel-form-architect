@@ -33,6 +33,7 @@ class Form implements Arrayable, ViewComponentable, JsonSerializable
         array $fields = [],
     )
     {
+        $this->fields($fields);
     }
 
     public function viewComponent(): string
