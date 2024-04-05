@@ -11,7 +11,7 @@ class Select extends HtmlFormField
     protected function fieldData(): array
     {
         return array_merge(parent::fieldData(), [
-            'options' => $this->options,
+            'options' => $this->getOptions(),
             'grouped' => $this->isOptionsGrouped,
         ]);
     }
