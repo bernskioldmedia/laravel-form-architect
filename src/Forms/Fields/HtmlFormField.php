@@ -1,5 +1,7 @@
 <?php
 
+namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
+
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsDisabled;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsHelpText;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPlaceholder;

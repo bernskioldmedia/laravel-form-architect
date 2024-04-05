@@ -1,5 +1,7 @@
 <?php
 
+namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
+
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPlaceholder;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPrefix;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsSuffix;

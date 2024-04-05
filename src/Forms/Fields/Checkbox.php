@@ -1,5 +1,7 @@
 <?php
 
+namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
+
 class Checkbox extends HtmlFormField
 {
 

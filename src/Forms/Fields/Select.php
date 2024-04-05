@@ -1,5 +1,7 @@
 <?php
 
+namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
+
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsOptions;
 
 class Select extends HtmlFormField
