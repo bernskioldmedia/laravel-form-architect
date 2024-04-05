@@ -2,7 +2,6 @@
 
 namespace BernskioldMedia\LaravelFormArchitect\Concerns;
 
-use function explode;
 use function property_exists;
 
 trait SupportsLivewire
@@ -30,4 +29,8 @@ trait SupportsLivewire
         return $this;
     }
 
+    public function propertyName(): string
+    {
+        return $this->wireModel ?? $this->name;
+    }
 }

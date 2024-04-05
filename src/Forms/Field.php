@@ -3,23 +3,26 @@
 namespace BernskioldMedia\LaravelFormArchitect;
 
 use BernskioldMedia\LaravelFormArchitect\Concerns\Dumpable;
+use BernskioldMedia\LaravelFormArchitect\Concerns\HandlesValidation;
 use BernskioldMedia\LaravelFormArchitect\Concerns\Makeable;
 use BernskioldMedia\LaravelFormArchitect\Concerns\Metable;
 use BernskioldMedia\LaravelFormArchitect\Concerns\OutputsToViewComponent;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsDescription;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsLabel;
+use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsLivewire;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsVisibility;
 use BernskioldMedia\LaravelFormArchitect\Contracts\ViewComponentable;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\Tappable;
+use JsonSerializable;
 use function array_merge;
 
 /**
  * @method static Field make(string $name, string $label = '')
  */
-abstract class Field implements Arrayable, ViewComponentable
+abstract class Field implements Arrayable, ViewComponentable, JsonSerializable
 {
     use Makeable,
         Conditionable,
@@ -30,6 +33,8 @@ abstract class Field implements Arrayable, ViewComponentable
         SupportsVisibility,
         SupportsDescription,
         SupportsLabel,
+        SupportsLivewire,
+        HandlesValidation,
         OutputsToViewComponent;
 
     protected ?string $id = null;
@@ -68,6 +73,11 @@ abstract class Field implements Arrayable, ViewComponentable
     public function toArray()
     {
         return array_merge($this->meta(), $this->fieldData());
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return $this->toArray();
     }
 
     public function name(?string $name = null): static

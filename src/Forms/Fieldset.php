@@ -14,6 +14,7 @@ use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\Tappable;
 use Illuminate\View\ComponentAttributeBag;
+use JsonSerializable;
 use function array_merge;
 use function collect;
 use function config;
@@ -21,7 +22,7 @@ use function config;
 /**
  * @method static Fieldset make(string $label, array $fields = [])
  */
-class Fieldset implements Arrayable, ViewComponentable
+class Fieldset implements Arrayable, ViewComponentable, JsonSerializable
 {
     use Makeable,
         Tappable,
@@ -66,6 +67,11 @@ class Fieldset implements Arrayable, ViewComponentable
         return array_merge($this->fieldsetData(), [
             'fields' => collect($this->fields)->toArray(),
         ]);
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return $this->toArray();
     }
 
     public function columns(int $columns = 1): static
