@@ -62,6 +62,7 @@ abstract class Field implements Arrayable, ViewComponentable, JsonSerializable
     {
         return [
             'id' => $this->id(),
+            'label' => $this->label,
             'name' => $this->name,
             'value' => $this->value,
             'visible' => $this->visible,
