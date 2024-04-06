@@ -8,6 +8,9 @@
         @endforeach
     </x-dynamic-component>
 @else
-    <x-dynamic-component :component="$field->viewComponent()"
-                         :attributes="$field->toViewComponentAttributes()"/>
+    <x-dynamic-component :component="config('form-architect.components.field')"
+                         :attributes="$field->toViewComponentAttributes()">
+        <x-dynamic-component :component="$field->viewComponent()"
+                             :attributes="$field->toViewComponentAttributes()"/>
+    </x-dynamic-component>
 @endif
