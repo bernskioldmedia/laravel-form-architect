@@ -2,6 +2,7 @@
 
 namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
 
+use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsMaxLength;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPlaceholder;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPrefix;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsSuffix;
@@ -15,7 +16,8 @@ class Input extends HtmlFormField
 {
     use SupportsSuffix,
         SupportsPrefix,
-        SupportsPlaceholder;
+        SupportsPlaceholder,
+        SupportsMaxLength;
 
     public InputType $type = InputType::Text;
 
@@ -25,10 +27,6 @@ class Input extends HtmlFormField
 
     public ?int $step = null;
 
-    public ?int $maxlength = null;
-
-    public ?int $minlength = null;
-
     protected function fieldData(): array
     {
         $data = [
@@ -37,7 +35,6 @@ class Input extends HtmlFormField
             'suffix' => $this->suffix,
             'placeholder' => $this->placeholder,
             'maxlength' => $this->maxlength,
-            'minlength' => $this->minlength,
         ];
 
         if ($this->type === InputType::Number) {

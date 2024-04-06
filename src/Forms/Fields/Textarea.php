@@ -2,6 +2,7 @@
 
 namespace BernskioldMedia\LaravelFormArchitect\Forms\Fields;
 
+use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsMaxLength;
 use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPlaceholder;
 
 /**
@@ -9,7 +10,8 @@ use BernskioldMedia\LaravelFormArchitect\Concerns\SupportsPlaceholder;
  */
 class Textarea extends HtmlFormField
 {
-    use SupportsPlaceholder;
+    use SupportsPlaceholder,
+        SupportsMaxLength;
 
     public int $rows = 3;
 
@@ -18,6 +20,7 @@ class Textarea extends HtmlFormField
         return array_merge(parent::fieldData(), [
             'placeholder' => $this->placeholder,
             'rows' => $this->rows,
+            'maxlength' => $this->maxlength,
         ]);
     }
 
