@@ -16,6 +16,7 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\Tappable;
+use Illuminate\View\ComponentAttributeBag;
 use JsonSerializable;
 use function array_merge;
 
@@ -67,11 +68,17 @@ abstract class Field implements Arrayable, ViewComponentable, JsonSerializable
             'value' => $this->value,
             'visible' => $this->visible,
             'description' => $this->description,
-            'fullwidth' => $this->fullwidth,
-            'spanColumns' => $this->spanColumns,
             'wireModel' => $this->wireModel,
             'isWiredLive' => $this->isWiredLive,
         ];
+    }
+
+    public function toWrapperViewComponentAttributes(): ComponentAttributeBag
+    {
+        return new ComponentAttributeBag([
+            'spanColumns' => $this->spanColumns,
+            'fullwidth' => $this->fullwidth,
+        ]);
     }
 
     public function toArray()

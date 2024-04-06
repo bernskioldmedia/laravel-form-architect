@@ -9,7 +9,7 @@
     </x-dynamic-component>
 @else
     <x-dynamic-component :component="config('form-architect.components.field')"
-                         :attributes="$field->toViewComponentAttributes()">
+                         :attributes="$field->toWrapperViewComponentAttributes()">
         <x-dynamic-component :component="$field->viewComponent()"
                              :attributes="$field->toViewComponentAttributes()"/>
     </x-dynamic-component>
