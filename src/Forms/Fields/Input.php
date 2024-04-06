@@ -25,6 +25,10 @@ class Input extends HtmlFormField
 
     public ?int $step = null;
 
+    public ?int $maxlength = null;
+
+    public ?int $minlength = null;
+
     protected function fieldData(): array
     {
         $data = [
@@ -32,6 +36,8 @@ class Input extends HtmlFormField
             'prefix' => $this->prefix,
             'suffix' => $this->suffix,
             'placeholder' => $this->placeholder,
+            'maxlength' => $this->maxlength,
+            'minlength' => $this->minlength,
         ];
 
         if ($this->type === InputType::Number) {
